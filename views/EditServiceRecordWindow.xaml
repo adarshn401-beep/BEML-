@@ -1,0 +1,229 @@
+<Window x:Class="BEMLPropertyManagement.Views.EditServiceRecordWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="Edit Service Record"
+        Height="700"
+        Width="800"
+        WindowStartupLocation="CenterScreen"
+        Background="#F4F6F8">
+
+    <Grid Margin="30">
+
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="Auto"/>
+        </Grid.RowDefinitions>
+
+        <!-- HEADER -->
+
+        <StackPanel Grid.Row="0"
+                    Margin="0,0,0,20">
+
+            <TextBlock Text="Edit Service Record"
+                       FontSize="30"
+                       FontWeight="Bold"
+                       Foreground="#111827"/>
+
+            <TextBlock Text="Update service and maintenance information"
+                       FontSize="15"
+                       Foreground="#6B7280"
+                       Margin="0,5,0,0"/>
+
+        </StackPanel>
+
+        <!-- FORM -->
+
+        <ScrollViewer Grid.Row="1"
+                      VerticalScrollBarVisibility="Auto">
+
+            <Grid>
+
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="220"/>
+                    <ColumnDefinition Width="*"/>
+                </Grid.ColumnDefinitions>
+
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                </Grid.RowDefinitions>
+
+                <!-- ASSET -->
+
+                <TextBlock Grid.Row="0"
+                           Grid.Column="0"
+                           Text="Asset"
+                           FontWeight="Bold"
+                           Margin="5,10"/>
+
+                <ComboBox x:Name="AssetComboBox"
+                          Grid.Row="0"
+                          Grid.Column="1"
+                          Height="35"
+                          Margin="5"/>
+
+                <!-- COMPLAINT DATE -->
+
+                <TextBlock Grid.Row="1"
+                           Grid.Column="0"
+                           Text="Complaint Date"
+                           FontWeight="Bold"
+                           Margin="5,10"/>
+
+                <DatePicker x:Name="ComplaintDatePicker"
+                            Grid.Row="1"
+                            Grid.Column="1"
+                            Height="35"
+                            Margin="5"/>
+
+                <!-- PROBLEM DESCRIPTION -->
+
+                <TextBlock Grid.Row="2"
+                           Grid.Column="0"
+                           Text="Problem Description"
+                           FontWeight="Bold"
+                           Margin="5,10"/>
+
+                <TextBox x:Name="ProblemDescriptionTextBox"
+                         Grid.Row="2"
+                         Grid.Column="1"
+                         Height="80"
+                         Margin="5"
+                         Padding="8"
+                         TextWrapping="Wrap"
+                         AcceptsReturn="True"
+                         VerticalScrollBarVisibility="Auto"/>
+
+                <!-- SERVICE DATE -->
+
+                <TextBlock Grid.Row="3"
+                           Grid.Column="0"
+                           Text="Service Date"
+                           FontWeight="Bold"
+                           Margin="5,10"/>
+
+                <DatePicker x:Name="ServiceDatePicker"
+                            Grid.Row="3"
+                            Grid.Column="1"
+                            Height="35"
+                            Margin="5"/>
+
+                <!-- SERVICE PROVIDER -->
+
+                <TextBlock Grid.Row="4"
+                           Grid.Column="0"
+                           Text="Service Provider"
+                           FontWeight="Bold"
+                           Margin="5,10"/>
+
+                <TextBox x:Name="ServiceProviderTextBox"
+                         Grid.Row="4"
+                         Grid.Column="1"
+                         Height="35"
+                         Margin="5"
+                         Padding="8"/>
+
+                <!-- SERVICE COST -->
+
+                <TextBlock Grid.Row="5"
+                           Grid.Column="0"
+                           Text="Service Cost"
+                           FontWeight="Bold"
+                           Margin="5,10"/>
+
+                <TextBox x:Name="ServiceCostTextBox"
+                         Grid.Row="5"
+                         Grid.Column="1"
+                         Height="35"
+                         Margin="5"
+                         Padding="8"/>
+
+                <!-- WORK DESCRIPTION -->
+
+                <TextBlock Grid.Row="6"
+                           Grid.Column="0"
+                           Text="Work Description"
+                           FontWeight="Bold"
+                           Margin="5,10"/>
+
+                <TextBox x:Name="WorkDescriptionTextBox"
+                         Grid.Row="6"
+                         Grid.Column="1"
+                         Height="80"
+                         Margin="5"
+                         Padding="8"
+                         TextWrapping="Wrap"
+                         AcceptsReturn="True"
+                         VerticalScrollBarVisibility="Auto"/>
+
+                <!-- STATUS -->
+
+                <TextBlock Grid.Row="7"
+                           Grid.Column="0"
+                           Text="Status"
+                           FontWeight="Bold"
+                           Margin="5,10"/>
+
+                <ComboBox x:Name="StatusComboBox"
+                          Grid.Row="7"
+                          Grid.Column="1"
+                          Height="35"
+                          Margin="5">
+
+                    <ComboBoxItem Content="Open"/>
+                    <ComboBoxItem Content="In Progress"/>
+                    <ComboBoxItem Content="Completed"/>
+                    <ComboBoxItem Content="Cancelled"/>
+
+                </ComboBox>
+
+                <!-- NEXT SERVICE DATE -->
+
+                <TextBlock Grid.Row="8"
+                           Grid.Column="0"
+                           Text="Next Service Date"
+                           FontWeight="Bold"
+                           Margin="5,10"/>
+
+                <DatePicker x:Name="NextServiceDatePicker"
+                            Grid.Row="8"
+                            Grid.Column="1"
+                            Height="35"
+                            Margin="5"/>
+
+            </Grid>
+
+        </ScrollViewer>
+
+        <!-- BUTTONS -->
+
+        <StackPanel Grid.Row="2"
+                    Orientation="Horizontal"
+                    HorizontalAlignment="Right"
+                    Margin="0,20,0,0">
+
+            <Button Content="Cancel"
+                    Width="100"
+                    Height="40"
+                    Margin="5"
+                    Click="CancelButton_Click"/>
+
+            <Button Content="Save Changes"
+                    Width="130"
+                    Height="40"
+                    Margin="5"
+                    Click="SaveChangesButton_Click"/>
+
+        </StackPanel>
+
+    </Grid>
+
+</Window>

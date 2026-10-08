@@ -1,0 +1,382 @@
+<Window x:Class="BEMLPropertyManagement.Views.AssetDetailsWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="BEML - Asset Details"
+        Height="720"
+        Width="900"
+        WindowStartupLocation="CenterScreen"
+        Background="#F4F6F8"
+        ResizeMode="CanResize">
+
+    <Grid Margin="30">
+
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="Auto"/>
+        </Grid.RowDefinitions>
+
+        <!-- HEADER -->
+        <StackPanel Grid.Row="0"
+                    Margin="0,0,0,25">
+
+            <TextBlock Text="Asset Details"
+                       FontSize="30"
+                       FontWeight="Bold"
+                       Foreground="#111827"/>
+
+            <TextBlock Text="Complete information about the selected BEML asset"
+                       FontSize="14"
+                       Foreground="#6B7280"
+                       Margin="0,5,0,0"/>
+
+        </StackPanel>
+
+        <!-- DETAILS -->
+        <ScrollViewer Grid.Row="1"
+                      VerticalScrollBarVisibility="Auto">
+
+            <StackPanel>
+
+                <!-- ASSET INFORMATION -->
+                <Border Background="White"
+                        CornerRadius="10"
+                        Padding="20"
+                        Margin="0,0,0,15">
+
+                    <StackPanel>
+
+                        <TextBlock Text="Asset Information"
+                                   FontSize="20"
+                                   FontWeight="Bold"
+                                   Foreground="#111827"
+                                   Margin="0,0,0,15"/>
+
+                        <Grid>
+
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="*"/>
+                                <ColumnDefinition Width="*"/>
+                            </Grid.ColumnDefinitions>
+
+                            <StackPanel Grid.Column="0"
+                                        Margin="0,0,20,0">
+
+                                <TextBlock Text="Asset ID"
+                                           FontWeight="Bold"
+                                           Foreground="#6B7280"/>
+
+                                <TextBlock x:Name="AssetIdTextBlock"
+                                           FontSize="15"
+                                           Margin="0,3,0,12"/>
+
+                                <TextBlock Text="Item Number"
+                                           FontWeight="Bold"
+                                           Foreground="#6B7280"/>
+
+                                <TextBlock x:Name="ItemNumberTextBlock"
+                                           FontSize="15"
+                                           Margin="0,3,0,12"/>
+
+                                <TextBlock Text="Asset Type"
+                                           FontWeight="Bold"
+                                           Foreground="#6B7280"/>
+
+                                <TextBlock x:Name="AssetTypeTextBlock"
+                                           FontSize="15"
+                                           Margin="0,3,0,12"/>
+
+                                <TextBlock Text="Brand"
+                                           FontWeight="Bold"
+                                           Foreground="#6B7280"/>
+
+                                <TextBlock x:Name="BrandTextBlock"
+                                           FontSize="15"
+                                           Margin="0,3,0,12"/>
+
+                            </StackPanel>
+
+                            <StackPanel Grid.Column="1">
+
+                                <TextBlock Text="Model"
+                                           FontWeight="Bold"
+                                           Foreground="#6B7280"/>
+
+                                <TextBlock x:Name="ModelTextBlock"
+                                           FontSize="15"
+                                           Margin="0,3,0,12"/>
+
+                                <TextBlock Text="Serial Number"
+                                           FontWeight="Bold"
+                                           Foreground="#6B7280"/>
+
+                                <TextBlock x:Name="SerialNumberTextBlock"
+                                           FontSize="15"
+                                           Margin="0,3,0,12"/>
+
+                                <TextBlock Text="Status"
+                                           FontWeight="Bold"
+                                           Foreground="#6B7280"/>
+
+                                <TextBlock x:Name="StatusTextBlock"
+                                           FontSize="15"
+                                           Margin="0,3,0,12"/>
+
+                                <TextBlock Text="Condition"
+                                           FontWeight="Bold"
+                                           Foreground="#6B7280"/>
+
+                                <TextBlock x:Name="ConditionTextBlock"
+                                           FontSize="15"
+                                           Margin="0,3,0,12"/>
+
+                            </StackPanel>
+
+                        </Grid>
+
+                    </StackPanel>
+
+                </Border>
+
+                <!-- ASSIGNMENT INFORMATION -->
+                <Border Background="White"
+                        CornerRadius="10"
+                        Padding="20"
+                        Margin="0,0,0,15">
+
+                    <StackPanel>
+
+                        <TextBlock Text="Assignment Information"
+                                   FontSize="20"
+                                   FontWeight="Bold"
+                                   Foreground="#111827"
+                                   Margin="0,0,0,15"/>
+
+                        <Grid>
+
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="*"/>
+                                <ColumnDefinition Width="*"/>
+                            </Grid.ColumnDefinitions>
+
+                            <StackPanel Grid.Column="0"
+                                        Margin="0,0,20,0">
+
+                                <TextBlock Text="Division"
+                                           FontWeight="Bold"
+                                           Foreground="#6B7280"/>
+
+                                <TextBlock x:Name="DivisionTextBlock"
+                                           FontSize="15"
+                                           Margin="0,3,0,12"/>
+
+                                <TextBlock Text="Department"
+                                           FontWeight="Bold"
+                                           Foreground="#6B7280"/>
+
+                                <TextBlock x:Name="DepartmentTextBlock"
+                                           FontSize="15"
+                                           Margin="0,3,0,12"/>
+
+                            </StackPanel>
+
+                            <StackPanel Grid.Column="1">
+
+                                <TextBlock Text="Location"
+                                           FontWeight="Bold"
+                                           Foreground="#6B7280"/>
+
+                                <TextBlock x:Name="LocationTextBlock"
+                                           FontSize="15"
+                                           Margin="0,3,0,12"/>
+
+                                <TextBlock Text="Assigned Employee"
+                                           FontWeight="Bold"
+                                           Foreground="#6B7280"/>
+
+                                <TextBlock x:Name="EmployeeTextBlock"
+                                           FontSize="15"
+                                           Margin="0,3,0,12"/>
+
+                                <TextBlock Text="Vendor"
+                                           FontWeight="Bold"
+                                           Foreground="#6B7280"/>
+
+                                <TextBlock x:Name="VendorTextBlock"
+                                           FontSize="15"
+                                           Margin="0,3,0,12"/>
+
+                            </StackPanel>
+
+                        </Grid>
+
+                    </StackPanel>
+
+                </Border>
+
+                <!-- PURCHASE & WARRANTY -->
+                <Border Background="White"
+                        CornerRadius="10"
+                        Padding="20"
+                        Margin="0,0,0,15">
+
+                    <StackPanel>
+
+                        <TextBlock Text="Purchase &amp; Warranty"
+                                   FontSize="20"
+                                   FontWeight="Bold"
+                                   Foreground="#111827"
+                                   Margin="0,0,0,15"/>
+
+                        <Grid>
+
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="*"/>
+                                <ColumnDefinition Width="*"/>
+                            </Grid.ColumnDefinitions>
+
+                            <StackPanel Grid.Column="0"
+                                        Margin="0,0,20,0">
+
+                                <TextBlock Text="Purchase Date"
+                                           FontWeight="Bold"
+                                           Foreground="#6B7280"/>
+
+                                <TextBlock x:Name="PurchaseDateTextBlock"
+                                           FontSize="15"
+                                           Margin="0,3,0,12"/>
+
+                                <TextBlock Text="Purchase Cost"
+                                           FontWeight="Bold"
+                                           Foreground="#6B7280"/>
+
+                                <TextBlock x:Name="PurchaseCostTextBlock"
+                                           FontSize="15"
+                                           Margin="0,3,0,12"/>
+
+                            </StackPanel>
+
+                            <StackPanel Grid.Column="1">
+
+                                <TextBlock Text="Warranty Start Date"
+                                           FontWeight="Bold"
+                                           Foreground="#6B7280"/>
+
+                                <TextBlock x:Name="WarrantyStartTextBlock"
+                                           FontSize="15"
+                                           Margin="0,3,0,12"/>
+
+                                <TextBlock Text="Warranty End Date"
+                                           FontWeight="Bold"
+                                           Foreground="#6B7280"/>
+
+                                <TextBlock x:Name="WarrantyEndTextBlock"
+                                           FontSize="15"
+                                           Margin="0,3,0,12"/>
+
+                            </StackPanel>
+
+                        </Grid>
+
+                    </StackPanel>
+
+                </Border>
+
+                <!-- REPLACEMENT -->
+                <Border Background="White"
+                        CornerRadius="10"
+                        Padding="20"
+                        Margin="0,0,0,15">
+
+                    <StackPanel>
+
+                        <TextBlock Text="Replacement Information"
+                                   FontSize="20"
+                                   FontWeight="Bold"
+                                   Foreground="#111827"
+                                   Margin="0,0,0,15"/>
+
+                        <Grid>
+
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="*"/>
+                                <ColumnDefinition Width="*"/>
+                            </Grid.ColumnDefinitions>
+
+                            <StackPanel Grid.Column="0"
+                                        Margin="0,0,20,0">
+
+                                <TextBlock Text="Expected Life"
+                                           FontWeight="Bold"
+                                           Foreground="#6B7280"/>
+
+                                <TextBlock x:Name="ExpectedLifeTextBlock"
+                                           FontSize="15"
+                                           Margin="0,3,0,12"/>
+
+                            </StackPanel>
+
+                            <StackPanel Grid.Column="1">
+
+                                <TextBlock Text="Expected Replacement Date"
+                                           FontWeight="Bold"
+                                           Foreground="#6B7280"/>
+
+                                <TextBlock x:Name="ReplacementDateTextBlock"
+                                           FontSize="15"
+                                           Margin="0,3,0,12"/>
+
+                            </StackPanel>
+
+                        </Grid>
+
+                    </StackPanel>
+
+                </Border>
+
+                <!-- REMARKS -->
+                <Border Background="White"
+                        CornerRadius="10"
+                        Padding="20"
+                        Margin="0,0,0,10">
+
+                    <StackPanel>
+
+                        <TextBlock Text="Remarks"
+                                   FontSize="20"
+                                   FontWeight="Bold"
+                                   Foreground="#111827"
+                                   Margin="0,0,0,10"/>
+
+                        <TextBlock x:Name="RemarksTextBlock"
+                                   FontSize="15"
+                                   Foreground="#374151"
+                                   TextWrapping="Wrap"/>
+
+                    </StackPanel>
+
+                </Border>
+
+            </StackPanel>
+
+        </ScrollViewer>
+
+        <!-- BOTTOM BUTTON -->
+        <StackPanel Grid.Row="2"
+                    Orientation="Horizontal"
+                    HorizontalAlignment="Right"
+                    Margin="0,15,0,0">
+
+            <Button Content="Close"
+                    Width="120"
+                    Height="40"
+                    Background="#6B7280"
+                    Foreground="White"
+                    BorderThickness="0"
+                    Click="CloseButton_Click"/>
+
+        </StackPanel>
+
+    </Grid>
+
+</Window>

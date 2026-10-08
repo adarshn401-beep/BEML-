@@ -1,0 +1,223 @@
+<Window x:Class="BEMLPropertyManagement.Views.EditComplaintWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="Edit Complaint"
+        Height="700"
+        Width="700"
+        WindowStartupLocation="CenterScreen"
+        ResizeMode="NoResize"
+        Background="#F5F6FA">
+
+    <Grid Margin="25">
+
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="Auto"/>
+        </Grid.RowDefinitions>
+
+        <!-- HEADER -->
+        <TextBlock Grid.Row="0"
+                   Text="Edit Complaint"
+                   FontSize="26"
+                   FontWeight="Bold"
+                   Foreground="#1F2937"
+                   Margin="0,0,0,20"/>
+
+        <!-- FORM -->
+        <ScrollViewer Grid.Row="1"
+                      VerticalScrollBarVisibility="Auto">
+
+            <Grid>
+
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="190"/>
+                    <ColumnDefinition Width="*"/>
+                </Grid.ColumnDefinitions>
+
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="55"/>
+                    <RowDefinition Height="55"/>
+                    <RowDefinition Height="55"/>
+                    <RowDefinition Height="100"/>
+                    <RowDefinition Height="55"/>
+                    <RowDefinition Height="55"/>
+                    <RowDefinition Height="100"/>
+                    <RowDefinition Height="55"/>
+                    <RowDefinition Height="100"/>
+                </Grid.RowDefinitions>
+
+                <!-- ASSET -->
+                <TextBlock Grid.Row="0"
+                           Grid.Column="0"
+                           Text="Asset *"
+                           VerticalAlignment="Center"
+                           FontWeight="SemiBold"/>
+
+                <ComboBox x:Name="AssetComboBox"
+                          Grid.Row="0"
+                          Grid.Column="1"
+                          Height="38"
+                          VerticalContentAlignment="Center"/>
+
+                <!-- REPORTED BY -->
+                <TextBlock Grid.Row="1"
+                           Grid.Column="0"
+                           Text="Reported By"
+                           VerticalAlignment="Center"
+                           FontWeight="SemiBold"/>
+
+                <ComboBox x:Name="EmployeeComboBox"
+                          Grid.Row="1"
+                          Grid.Column="1"
+                          Height="38"
+                          VerticalContentAlignment="Center"/>
+
+                <!-- COMPLAINT DATE -->
+                <TextBlock Grid.Row="2"
+                           Grid.Column="0"
+                           Text="Complaint Date *"
+                           VerticalAlignment="Center"
+                           FontWeight="SemiBold"/>
+
+                <DatePicker x:Name="ComplaintDatePicker"
+                            Grid.Row="2"
+                            Grid.Column="1"
+                            Height="38"/>
+
+                <!-- PROBLEM TITLE -->
+                <TextBlock Grid.Row="3"
+                           Grid.Column="0"
+                           Text="Problem Title *"
+                           VerticalAlignment="Top"
+                           Margin="0,10,0,0"
+                           FontWeight="SemiBold"/>
+
+                <TextBox x:Name="ProblemTitleTextBox"
+                         Grid.Row="3"
+                         Grid.Column="1"
+                         Height="75"
+                         Padding="8"
+                         TextWrapping="Wrap"
+                         AcceptsReturn="True"
+                         VerticalScrollBarVisibility="Auto"/>
+
+                <!-- PRIORITY -->
+                <TextBlock Grid.Row="4"
+                           Grid.Column="0"
+                           Text="Priority *"
+                           VerticalAlignment="Center"
+                           FontWeight="SemiBold"/>
+
+                <ComboBox x:Name="PriorityComboBox"
+                          Grid.Row="4"
+                          Grid.Column="1"
+                          Height="38"
+                          VerticalContentAlignment="Center">
+
+                    <ComboBoxItem Content="Low"/>
+                    <ComboBoxItem Content="Medium"/>
+                    <ComboBoxItem Content="High"/>
+                    <ComboBoxItem Content="Critical"/>
+
+                </ComboBox>
+
+                <!-- STATUS -->
+                <TextBlock Grid.Row="5"
+                           Grid.Column="0"
+                           Text="Status *"
+                           VerticalAlignment="Center"
+                           FontWeight="SemiBold"/>
+
+                <ComboBox x:Name="StatusComboBox"
+                          Grid.Row="5"
+                          Grid.Column="1"
+                          Height="38"
+                          VerticalContentAlignment="Center">
+
+                    <ComboBoxItem Content="Open"/>
+                    <ComboBoxItem Content="In Progress"/>
+                    <ComboBoxItem Content="Resolved"/>
+                    <ComboBoxItem Content="Closed"/>
+
+                </ComboBox>
+
+                <!-- PROBLEM DESCRIPTION -->
+                <TextBlock Grid.Row="6"
+                           Grid.Column="0"
+                           Text="Problem Description *"
+                           VerticalAlignment="Top"
+                           Margin="0,10,0,0"
+                           FontWeight="SemiBold"/>
+
+                <TextBox x:Name="ProblemDescriptionTextBox"
+                         Grid.Row="6"
+                         Grid.Column="1"
+                         Height="75"
+                         Padding="8"
+                         TextWrapping="Wrap"
+                         AcceptsReturn="True"
+                         VerticalScrollBarVisibility="Auto"/>
+
+                <!-- RESOLVED DATE -->
+                <TextBlock Grid.Row="7"
+                           Grid.Column="0"
+                           Text="Resolved Date"
+                           VerticalAlignment="Center"
+                           FontWeight="SemiBold"/>
+
+                <DatePicker x:Name="ResolvedDatePicker"
+                            Grid.Row="7"
+                            Grid.Column="1"
+                            Height="38"/>
+
+                <!-- RESOLUTION NOTES -->
+                <TextBlock Grid.Row="8"
+                           Grid.Column="0"
+                           Text="Resolution Notes"
+                           VerticalAlignment="Top"
+                           Margin="0,10,0,0"
+                           FontWeight="SemiBold"/>
+
+                <TextBox x:Name="ResolutionNotesTextBox"
+                         Grid.Row="8"
+                         Grid.Column="1"
+                         Height="75"
+                         Padding="8"
+                         TextWrapping="Wrap"
+                         AcceptsReturn="True"
+                         VerticalScrollBarVisibility="Auto"/>
+
+            </Grid>
+
+        </ScrollViewer>
+
+        <!-- BUTTONS -->
+        <StackPanel Grid.Row="2"
+                    Orientation="Horizontal"
+                    HorizontalAlignment="Right"
+                    Margin="0,20,0,0">
+
+            <Button Content="Cancel"
+                    Width="110"
+                    Height="40"
+                    Margin="0,0,10,0"
+                    Background="#E5E7EB"
+                    Foreground="#111827"
+                    BorderThickness="0"
+                    Click="CancelButton_Click"/>
+
+            <Button Content="Save Changes"
+                    Width="140"
+                    Height="40"
+                    Background="#1F4E78"
+                    Foreground="White"
+                    FontWeight="Bold"
+                    BorderThickness="0"
+                    Click="SaveChangesButton_Click"/>
+
+        </StackPanel>
+
+    </Grid>
+
+</Window>

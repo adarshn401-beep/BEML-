@@ -1,0 +1,399 @@
+<Window x:Class="BEMLPropertyManagement.Views.AddAssetWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="BEML - Add Asset"
+        Height="750"
+        Width="1000"
+        WindowStartupLocation="CenterScreen"
+        Background="#F4F6F8">
+
+    <Grid Margin="30">
+
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="Auto"/>
+        </Grid.RowDefinitions>
+
+        <!-- HEADER -->
+        <StackPanel Grid.Row="0"
+                    Margin="0,0,0,25">
+
+            <TextBlock Text="Add New Asset"
+                       FontSize="30"
+                       FontWeight="Bold"
+                       Foreground="#111827"/>
+
+            <TextBlock Text="Enter property and asset information"
+                       FontSize="15"
+                       Foreground="#6B7280"
+                       Margin="0,5,0,0"/>
+
+        </StackPanel>
+
+        <!-- FORM -->
+        <ScrollViewer Grid.Row="1"
+                      VerticalScrollBarVisibility="Auto">
+
+            <Grid>
+
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="*"/>
+                </Grid.ColumnDefinitions>
+
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                </Grid.RowDefinitions>
+
+                <!-- ITEM NUMBER -->
+                <StackPanel Grid.Row="0"
+                            Grid.Column="0"
+                            Margin="5">
+
+                    <TextBlock Text="Item Number"
+                               FontWeight="SemiBold"
+                               Margin="0,0,0,5"/>
+
+                    <TextBox x:Name="ItemNumberTextBox"
+                             Height="38"
+                             Padding="8"/>
+
+                </StackPanel>
+
+                <!-- ASSET TYPE -->
+                <StackPanel Grid.Row="0"
+                            Grid.Column="1"
+                            Margin="5">
+
+                    <TextBlock Text="Asset Type"
+                               FontWeight="SemiBold"
+                               Margin="0,0,0,5"/>
+
+                    <ComboBox x:Name="AssetTypeComboBox"
+                              Height="38"/>
+
+                </StackPanel>
+
+                <!-- BRAND -->
+                <StackPanel Grid.Row="1"
+                            Grid.Column="0"
+                            Margin="5">
+
+                    <TextBlock Text="Brand"
+                               FontWeight="SemiBold"
+                               Margin="0,0,0,5"/>
+
+                    <TextBox x:Name="BrandTextBox"
+                             Height="38"
+                             Padding="8"/>
+
+                </StackPanel>
+
+                <!-- MODEL -->
+                <StackPanel Grid.Row="1"
+                            Grid.Column="1"
+                            Margin="5">
+
+                    <TextBlock Text="Model"
+                               FontWeight="SemiBold"
+                               Margin="0,0,0,5"/>
+
+                    <TextBox x:Name="ModelTextBox"
+                             Height="38"
+                             Padding="8"/>
+
+                </StackPanel>
+
+                <!-- SERIAL NUMBER -->
+                <StackPanel Grid.Row="2"
+                            Grid.Column="0"
+                            Margin="5">
+
+                    <TextBlock Text="Serial Number"
+                               FontWeight="SemiBold"
+                               Margin="0,0,0,5"/>
+
+                    <TextBox x:Name="SerialNumberTextBox"
+                             Height="38"
+                             Padding="8"/>
+
+                </StackPanel>
+
+                <!-- DIVISION -->
+                <StackPanel Grid.Row="2"
+                            Grid.Column="1"
+                            Margin="5">
+
+                    <TextBlock Text="Division"
+                               FontWeight="SemiBold"
+                               Margin="0,0,0,5"/>
+
+                    <ComboBox x:Name="DivisionComboBox"
+                              Height="38"/>
+
+                </StackPanel>
+
+                <!-- DEPARTMENT -->
+                <StackPanel Grid.Row="3"
+                            Grid.Column="0"
+                            Margin="5">
+
+                    <TextBlock Text="Department"
+                               FontWeight="SemiBold"
+                               Margin="0,0,0,5"/>
+
+                    <ComboBox x:Name="DepartmentComboBox"
+                              Height="38"/>
+
+                </StackPanel>
+
+                <!-- LOCATION -->
+                <StackPanel Grid.Row="3"
+                            Grid.Column="1"
+                            Margin="5">
+
+                    <TextBlock Text="Location"
+                               FontWeight="SemiBold"
+                               Margin="0,0,0,5"/>
+
+                    <ComboBox x:Name="LocationComboBox"
+                              Height="38"/>
+
+                </StackPanel>
+
+                <!-- EMPLOYEE -->
+                <StackPanel Grid.Row="4"
+                            Grid.Column="0"
+                            Margin="5">
+
+                    <TextBlock Text="Assigned Employee"
+                               FontWeight="SemiBold"
+                               Margin="0,0,0,5"/>
+
+                    <ComboBox x:Name="EmployeeComboBox"
+                              Height="38"/>
+
+                </StackPanel>
+
+                <!-- VENDOR -->
+                <StackPanel Grid.Row="4"
+                            Grid.Column="1"
+                            Margin="5">
+
+                    <TextBlock Text="Vendor"
+                               FontWeight="SemiBold"
+                               Margin="0,0,0,5"/>
+
+                    <ComboBox x:Name="VendorComboBox"
+                              Height="38"/>
+
+                </StackPanel>
+
+                <!-- PURCHASE DATE -->
+                <StackPanel Grid.Row="5"
+                            Grid.Column="0"
+                            Margin="5">
+
+                    <TextBlock Text="Purchase Date"
+                               FontWeight="SemiBold"
+                               Margin="0,0,0,5"/>
+
+                    <DatePicker x:Name="PurchaseDatePicker"
+                                Height="38"/>
+
+                </StackPanel>
+
+                <!-- PURCHASE COST -->
+                <StackPanel Grid.Row="5"
+                            Grid.Column="1"
+                            Margin="5">
+
+                    <TextBlock Text="Purchase Cost"
+                               FontWeight="SemiBold"
+                               Margin="0,0,0,5"/>
+
+                    <TextBox x:Name="PurchaseCostTextBox"
+                             Height="38"
+                             Padding="8"/>
+
+                </StackPanel>
+
+                <!-- WARRANTY START -->
+                <StackPanel Grid.Row="6"
+                            Grid.Column="0"
+                            Margin="5">
+
+                    <TextBlock Text="Warranty Start Date"
+                               FontWeight="SemiBold"
+                               Margin="0,0,0,5"/>
+
+                    <DatePicker x:Name="WarrantyStartDatePicker"
+                                Height="38"/>
+
+                </StackPanel>
+
+                <!-- WARRANTY END -->
+                <StackPanel Grid.Row="6"
+                            Grid.Column="1"
+                            Margin="5">
+
+                    <TextBlock Text="Warranty End Date"
+                               FontWeight="SemiBold"
+                               Margin="0,0,0,5"/>
+
+                    <DatePicker x:Name="WarrantyEndDatePicker"
+                                Height="38"/>
+
+                </StackPanel>
+
+                <!-- EXPECTED LIFE -->
+                <StackPanel Grid.Row="7"
+                            Grid.Column="0"
+                            Margin="5">
+
+                    <TextBlock Text="Expected Life (Years)"
+                               FontWeight="SemiBold"
+                               Margin="0,0,0,5"/>
+
+                    <TextBox x:Name="ExpectedLifeTextBox"
+                             Height="38"
+                             Padding="8"/>
+
+                </StackPanel>
+
+                <!-- REPLACEMENT DATE -->
+                <StackPanel Grid.Row="7"
+                            Grid.Column="1"
+                            Margin="5">
+
+                    <TextBlock Text="Expected Replacement Date"
+                               FontWeight="SemiBold"
+                               Margin="0,0,0,5"/>
+
+                    <DatePicker x:Name="ReplacementDatePicker"
+                                Height="38"/>
+
+                </StackPanel>
+
+                <!-- STATUS -->
+                <StackPanel Grid.Row="8"
+                            Grid.Column="0"
+                            Margin="5">
+
+                    <TextBlock Text="Status"
+                               FontWeight="SemiBold"
+                               Margin="0,0,0,5"/>
+
+                    <ComboBox x:Name="StatusComboBox"
+                              Height="38">
+
+                        <ComboBoxItem Content="Active"/>
+                        <ComboBoxItem Content="Inactive"/>
+                        <ComboBoxItem Content="Under Maintenance"/>
+                        <ComboBoxItem Content="Disposed"/>
+
+                    </ComboBox>
+
+                </StackPanel>
+
+                <!-- CONDITION -->
+                <StackPanel Grid.Row="8"
+                            Grid.Column="1"
+                            Margin="5">
+
+                    <TextBlock Text="Asset Condition"
+                               FontWeight="SemiBold"
+                               Margin="0,0,0,5"/>
+
+                    <ComboBox x:Name="ConditionComboBox"
+                              Height="38">
+
+                        <ComboBoxItem Content="Good"/>
+                        <ComboBoxItem Content="Fair"/>
+                        <ComboBoxItem Content="Poor"/>
+                        <ComboBoxItem Content="Damaged"/>
+
+                    </ComboBox>
+
+                </StackPanel>
+
+                <!-- REMARKS -->
+                <StackPanel Grid.Row="9"
+                            Grid.Column="0"
+                            Grid.ColumnSpan="2"
+                            Margin="5">
+
+                    <TextBlock Text="Remarks"
+                               FontWeight="SemiBold"
+                               Margin="0,0,0,5"/>
+
+                    <TextBox x:Name="RemarksTextBox"
+                             Height="80"
+                             Padding="8"
+                             TextWrapping="Wrap"
+                             AcceptsReturn="True"
+                             VerticalScrollBarVisibility="Auto"/>
+
+                </StackPanel>
+
+            </Grid>
+
+        </ScrollViewer>
+
+        <!-- BOTTOM -->
+        <Grid Grid.Row="2"
+              Margin="5,20,5,0">
+
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="Auto"/>
+                <ColumnDefinition Width="Auto"/>
+            </Grid.ColumnDefinitions>
+
+            <!-- MESSAGE -->
+            <TextBlock x:Name="MessageTextBlock"
+                       Grid.Column="0"
+                       VerticalAlignment="Center"
+                       Foreground="#DC2626"
+                       FontSize="14"
+                       TextWrapping="Wrap"/>
+
+            <!-- SAVE -->
+            <Button Grid.Column="1"
+                    Content="Save Asset"
+                    Width="130"
+                    Height="42"
+                    Margin="10,0"
+                    Background="#2563EB"
+                    Foreground="White"
+                    BorderThickness="0"
+                    FontWeight="Bold"
+                    Click="SaveAssetButton_Click"/>
+
+            <!-- CANCEL -->
+            <Button Grid.Column="2"
+                    Content="Cancel"
+                    Width="110"
+                    Height="42"
+                    Background="#6B7280"
+                    Foreground="White"
+                    BorderThickness="0"
+                    FontWeight="Bold"
+                    Click="CancelButton_Click"/>
+
+        </Grid>
+
+    </Grid>
+
+</Window>

@@ -1,0 +1,209 @@
+<Window x:Class="BEMLPropertyManagement.Views.ServiceRecordDetailsWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="Service Record Details"
+        Height="650"
+        Width="800"
+        WindowStartupLocation="CenterScreen"
+        Background="#F4F6F8">
+
+    <Grid Margin="30">
+
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="Auto"/>
+        </Grid.RowDefinitions>
+
+        <!-- HEADER -->
+
+        <StackPanel Grid.Row="0"
+                    Margin="0,0,0,20">
+
+            <TextBlock Text="Service Record Details"
+                       FontSize="30"
+                       FontWeight="Bold"
+                       Foreground="#111827"/>
+
+            <TextBlock Text="Complete service and maintenance information"
+                       FontSize="15"
+                       Foreground="#6B7280"
+                       Margin="0,5,0,0"/>
+
+        </StackPanel>
+
+        <!-- DETAILS -->
+
+        <ScrollViewer Grid.Row="1"
+                      VerticalScrollBarVisibility="Auto">
+
+            <Grid>
+
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="220"/>
+                    <ColumnDefinition Width="*"/>
+                </Grid.ColumnDefinitions>
+
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                </Grid.RowDefinitions>
+
+                <!-- Asset -->
+
+                <TextBlock Grid.Row="0"
+                           Grid.Column="0"
+                           Text="Asset"
+                           FontWeight="Bold"
+                           Margin="5,10"/>
+
+                <TextBlock x:Name="AssetTextBlock"
+                           Grid.Row="0"
+                           Grid.Column="1"
+                           Margin="5,10"/>
+
+                <!-- Complaint Date -->
+
+                <TextBlock Grid.Row="1"
+                           Grid.Column="0"
+                           Text="Complaint Date"
+                           FontWeight="Bold"
+                           Margin="5,10"/>
+
+                <TextBlock x:Name="ComplaintDateTextBlock"
+                           Grid.Row="1"
+                           Grid.Column="1"
+                           Margin="5,10"/>
+
+                <!-- Problem -->
+
+                <TextBlock Grid.Row="2"
+                           Grid.Column="0"
+                           Text="Problem Description"
+                           FontWeight="Bold"
+                           Margin="5,10"/>
+
+                <TextBlock x:Name="ProblemDescriptionTextBlock"
+                           Grid.Row="2"
+                           Grid.Column="1"
+                           TextWrapping="Wrap"
+                           Margin="5,10"/>
+
+                <!-- Service Date -->
+
+                <TextBlock Grid.Row="3"
+                           Grid.Column="0"
+                           Text="Service Date"
+                           FontWeight="Bold"
+                           Margin="5,10"/>
+
+                <TextBlock x:Name="ServiceDateTextBlock"
+                           Grid.Row="3"
+                           Grid.Column="1"
+                           Margin="5,10"/>
+
+                <!-- Service Provider -->
+
+                <TextBlock Grid.Row="4"
+                           Grid.Column="0"
+                           Text="Service Provider"
+                           FontWeight="Bold"
+                           Margin="5,10"/>
+
+                <TextBlock x:Name="ServiceProviderTextBlock"
+                           Grid.Row="4"
+                           Grid.Column="1"
+                           Margin="5,10"/>
+
+                <!-- Service Cost -->
+
+                <TextBlock Grid.Row="5"
+                           Grid.Column="0"
+                           Text="Service Cost"
+                           FontWeight="Bold"
+                           Margin="5,10"/>
+
+                <TextBlock x:Name="ServiceCostTextBlock"
+                           Grid.Row="5"
+                           Grid.Column="1"
+                           Margin="5,10"/>
+
+                <!-- Work Description -->
+
+                <TextBlock Grid.Row="6"
+                           Grid.Column="0"
+                           Text="Work Description"
+                           FontWeight="Bold"
+                           Margin="5,10"/>
+
+                <TextBlock x:Name="WorkDescriptionTextBlock"
+                           Grid.Row="6"
+                           Grid.Column="1"
+                           TextWrapping="Wrap"
+                           Margin="5,10"/>
+
+                <!-- Status -->
+
+                <TextBlock Grid.Row="7"
+                           Grid.Column="0"
+                           Text="Status"
+                           FontWeight="Bold"
+                           Margin="5,10"/>
+
+                <TextBlock x:Name="StatusTextBlock"
+                           Grid.Row="7"
+                           Grid.Column="1"
+                           Margin="5,10"/>
+
+                <!-- Next Service -->
+
+                <TextBlock Grid.Row="8"
+                           Grid.Column="0"
+                           Text="Next Service Date"
+                           FontWeight="Bold"
+                           Margin="5,10"/>
+
+                <TextBlock x:Name="NextServiceDateTextBlock"
+                           Grid.Row="8"
+                           Grid.Column="1"
+                           Margin="5,10"/>
+
+                <!-- Remarks -->
+
+                <TextBlock Grid.Row="9"
+                           Grid.Column="0"
+                           Text="Remarks"
+                           FontWeight="Bold"
+                           Margin="5,10"/>
+
+                <TextBlock x:Name="RemarksTextBlock"
+                           Grid.Row="9"
+                           Grid.Column="1"
+                           TextWrapping="Wrap"
+                           Margin="5,10"/>
+
+            </Grid>
+
+        </ScrollViewer>
+
+        <!-- CLOSE BUTTON -->
+
+        <Button Grid.Row="2"
+                Content="Close"
+                Width="100"
+                Height="40"
+                HorizontalAlignment="Right"
+                Margin="0,20,0,0"
+                Click="CloseButton_Click"/>
+
+    </Grid>
+
+</Window>

@@ -1,0 +1,148 @@
+<Window x:Class="BEMLPropertyManagement.Views.ReportsWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="Reports"
+        Height="700"
+        Width="1400"
+        WindowStartupLocation="CenterScreen"
+        Background="#F5F6FA">
+
+    <Grid>
+
+        <Grid.RowDefinitions>
+            <RowDefinition Height="70"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+
+        <!-- HEADER -->
+        <Border Grid.Row="0"
+                Background="#1F4E78"
+                Padding="25,0">
+
+            <Grid>
+
+                <TextBlock Text="Reports"
+                           Foreground="White"
+                           FontSize="26"
+                           FontWeight="Bold"
+                           VerticalAlignment="Center"/>
+
+                <TextBlock Text="BEML Property Management Reports"
+                           Foreground="#DCE6F1"
+                           FontSize="14"
+                           VerticalAlignment="Center"
+                           HorizontalAlignment="Right"
+                           Margin="0,0,25,0"/>
+
+            </Grid>
+
+        </Border>
+
+        <!-- MAIN CONTENT -->
+        <Grid Grid.Row="1"
+              Margin="20">
+
+            <Grid.RowDefinitions>
+                <RowDefinition Height="85"/>
+                <RowDefinition Height="*"/>
+            </Grid.RowDefinitions>
+
+            <!-- REPORT OPTIONS -->
+            <Border Grid.Row="0"
+                    Background="White"
+                    Padding="15"
+                    Margin="0,0,0,15">
+
+                <StackPanel Orientation="Horizontal"
+                            VerticalAlignment="Center">
+
+                    <!-- ASSET -->
+                    <Button Content="Asset Report"
+                            Width="160"
+                            Height="45"
+                            Margin="5"
+                            Background="#1F4E78"
+                            Foreground="White"
+                            BorderThickness="0"
+                            FontSize="14"
+                            FontWeight="SemiBold"
+                            Click="AssetReportButton_Click"/>
+
+                    <!-- WARRANTY -->
+                    <Button Content="Warranty Report"
+                            Width="160"
+                            Height="45"
+                            Margin="5"
+                            Background="#1F4E78"
+                            Foreground="White"
+                            BorderThickness="0"
+                            FontSize="14"
+                            FontWeight="SemiBold"
+                            Click="WarrantyReportButton_Click"/>
+
+                    <!-- SERVICE -->
+                    <Button Content="Service Report"
+                            Width="160"
+                            Height="45"
+                            Margin="5"
+                            Background="#1F4E78"
+                            Foreground="White"
+                            BorderThickness="0"
+                            FontSize="14"
+                            FontWeight="SemiBold"
+                            Click="ServiceReportButton_Click"/>
+
+                    <!-- COMPLAINT -->
+                    <Button Content="Complaint Report"
+                            Width="160"
+                            Height="45"
+                            Margin="5"
+                            Background="#1F4E78"
+                            Foreground="White"
+                            BorderThickness="0"
+                            FontSize="14"
+                            FontWeight="SemiBold"
+                            Click="ComplaintReportButton_Click"/>
+
+                    <!-- REPLACEMENT -->
+                    <Button Content="Replacement Report"
+                            Width="170"
+                            Height="45"
+                            Margin="5"
+                            Background="#1F4E78"
+                            Foreground="White"
+                            BorderThickness="0"
+                            FontSize="14"
+                            FontWeight="SemiBold"
+                            Click="ReplacementReportButton_Click"/>
+
+                </StackPanel>
+
+            </Border>
+
+            <!-- REPORT TABLE -->
+            <Border Grid.Row="1"
+                    Background="White"
+                    Padding="12">
+
+                <DataGrid x:Name="ReportDataGrid"
+                          AutoGenerateColumns="True"
+                          IsReadOnly="True"
+                          CanUserAddRows="False"
+                          CanUserDeleteRows="False"
+                          HeadersVisibility="Column"
+                          GridLinesVisibility="Horizontal"
+                          RowHeight="35"
+                          FontSize="13"
+                          Background="White"
+                          SelectionMode="Single">
+
+                </DataGrid>
+
+            </Border>
+
+        </Grid>
+
+    </Grid>
+
+</Window>
